@@ -1,4 +1,3 @@
-Certainly! Below is a simple README template with checkboxes to help you track what's done:
 
 ```markdown
 # CSV Reconciliation Tool
@@ -12,10 +11,10 @@ A Python tool to reconcile records between two CSV files, comparing each field f
 - [x] Compares each field for records that exist in both files, highlighting discrepancies.
 - [x] Handles potential data transformation issues (e.g., date formats, case sensitivity, leading/trailing spaces).
 - [x] Produces a reconciliation report with sections for missing records and field discrepancies.
-- [ ] Implements a graphical user interface (GUI) for easy file selection and result visualization.
+- [x] Implements a graphical user interface (GUI) for easy file selection and result visualization.
 - [ ] Allows the user to configure which columns to compare, in case some columns should be ignored.
 - [ ] Implements fuzzy matching for non-identical but similar records.
-- [ ] Provides documentation or instructions on how to run the tool.
+- [x] Provides documentation or instructions on how to run the tool.
 - [ ] Scales over millions of rows.
 
 ## Usage
