@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 pandas = "*"
+django = "*"
+djangorestframework = "*"
+django-environ = "*"
+django-extensions = "*"
 
 [dev-packages]
 

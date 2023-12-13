@@ -1,37 +1,69 @@
-User Stories:
+Certainly! Below is a simple README template with checkboxes to help you track what's done:
 
-1. **As a user, I want to provide two CSV files (source and target) to the tool so that I can initiate the reconciliation process.**
+```markdown
+# CSV Reconciliation Tool
 
-2. **As a user, I want the tool to identify records that are present in the source but missing in the target, and vice versa, so that I can quickly understand the discrepancies.**
+A Python tool to reconcile records between two CSV files, comparing each field for discrepancies.
 
-3. **As a user, I want the tool to compare each field for records that exist in both files, highlighting discrepancies, to ensure data consistency.**
+## Features
 
-4. **As a user, I want the tool to handle potential data transformation issues (e.g., date formats, case sensitivity, leading/trailing spaces) during reconciliation to prevent false discrepancies.**
+- [x] Accepts two CSV files as input.
+- [x] Identifies records that are present in the source but missing in the target (and vice versa).
+- [x] Compares each field for records that exist in both files, highlighting discrepancies.
+- [x] Handles potential data transformation issues (e.g., date formats, case sensitivity, leading/trailing spaces).
+- [x] Produces a reconciliation report with sections for missing records and field discrepancies.
+- [ ] Implements a graphical user interface (GUI) for easy file selection and result visualization.
+- [ ] Allows the user to configure which columns to compare, in case some columns should be ignored.
+- [ ] Implements fuzzy matching for non-identical but similar records.
+- [ ] Provides documentation or instructions on how to run the tool.
+- [ ] Scales over millions of rows.
 
-5. **As a user, I want the tool to produce a reconciliation report in an easily readable format (CSV, HTML, etc.) that includes sections for records missing in the target, records missing in the source, and records with field discrepancies.**
+## Usage
 
-6. **As a user, I want to have the option to configure which columns to compare during reconciliation, in case some columns should be ignored.**
+To run the tool, use the following command:
 
-7. **As a user, I want the tool to implement fuzzy matching for non-identical but similar records to enhance the accuracy of reconciliation.**
+```bash
+$ python csv_reconciler.py -s source.csv -t target.csv -o reconciliation_report.csv
+```
 
-8. **As a user, I want the tool to have a graphical user interface (GUI) for easy file selection and visualization of reconciliation results to streamline the process.**
+## Sample Input Data
 
-9. **As a user, I want the tool to handle millions of rows efficiently, ensuring a scalable solution for large datasets.**
+**source.csv**
 
-10. **As a user, I want the tool to provide clear and meaningful error messages in case of potential issues such as file not found, invalid CSV format, etc., so that I can address them appropriately.**
+```
+ID,Name,Date,Amount
+001,John Doe,2023-01-01,100.00
+002,Jane Smith,2023-01-02,200.50
+003,Robert Brown,2023-01-03,300.75
+```
 
-11. **As a user, I want the tool to be implemented in Python as the backend language, ensuring compatibility with our existing technology stack.**
+**target.csv**
 
-12. **As a user, I want the CLI tool (csv_reconciler) to provide a summary after reconciliation, including the number of records missing in the target, records missing in the source, and records with field discrepancies.**
+```
+ID,Name,Date,Amount
+001,John Doe,2023-01-01,100.00
+002,Jane Smith,2023-01-04,200.50
+004,Emily White,2023-01-05,400.90
+```
 
-13. **As a user, I want the CLI tool to save the reconciliation report to a specified path so that I can easily access and review the results.**
+## Expected Output Data
 
-14. **As a user, I appreciate a well-organized, commented, and tested solution to ensure code quality.**
+**reconciliation_report.csv**
 
-15. **As a user, I appreciate documentation or instructions on how to run the tool, providing clarity on the tool's functionality and usage.**
+```
+Type,Record Identifier,Field,Source Value,Target Value
+Missing in Target,003,,,,
+Missing in Source,,004,,,
+Field Discrepancy,002,Date,2023-01-02,2023-01-04
+```
 
-16. **As a user, I acknowledge the expected time for completing the challenge is 3-5 hours but appreciate flexibility to use as much or as little time as needed to deliver a quality solution.**
+## Contributions
 
-17. **As a user interviewing for a Senior Software Engineer or Tech Lead role, I acknowledge that additional features, insights, or suggestions related to the product will be highly appreciated and may be required.**
+Contributions are welcome! Feel free to open an issue or submit a pull request.
 
-18. **As a user, I acknowledge that implementing CI/CD is a bonus, though not required, and any effort in this direction will be appreciated.**
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+```
+
+Feel free to adjust and customize it based on your project's specific needs.
