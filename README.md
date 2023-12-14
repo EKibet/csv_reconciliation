@@ -98,6 +98,9 @@ Close the GUI window when you have completed the reconciliation process.
 ## Demo
 
 Here's a brief demonstration of how the Reconciliation Toolkit works:
+### Demo for both tools
+1[Reconciliation CLI & GUI Tools Demo](https://github.com/EKibet/csv_reconciliation/tree/development)
+
 
 ### CLI Tool in Action
 
