@@ -1,76 +1,109 @@
-# Reconciliation Toolkit GUI - User Documentation
+# CSV Reconciler
 
-Welcome to the Reconciliation Toolkit GUI, a graphical user interface for reconciling CSV files. This tool allows you to easily select source and target CSV files, initiate the reconciliation process, and visualize the results.
+## Overview
 
-## Prerequisites
+CSV Reconciler is a tool designed to facilitate the reconciliation of data between two CSV files. This tool is available both as a Command Line Interface (CLI) and as a Graphical User Interface (GUI).
 
-Before running the GUI tool, ensure that you have the following prerequisites installed on your system:
+## Table of Contents
 
-1. Python 3.x (Download and installation instructions: [Python Downloads](https://www.python.org/downloads/))
-2. Required Python packages. Install them using the following command:
+- [Installation](#installation)
+- [Usage](#usage)
+  - [CLI Usage](#cli-usage)
+  - [GUI Usage](#gui-usage)
+- [Common Issues and Solutions](#common-issues-and-solutions)
+- [Contributing](#contributing)
+- [Screenshots](#screenshots)
+- [License](#license)
 
+## Installation
+
+1. **Clone the Repository and Checkout `reconciliation-cli` Branch:**
    ```bash
-   pip install pandas 
+   git clone https://github.com/EKibet/csv_reconciliation.git
+   cd csv-reconciler
+   git checkout reconciliation-cli
    ```
 
-## Running the GUI Tool
+2. **Create a Virtual Environment (Optional but Recommended):**
+   ```bash
+   python -m venv venv
+   ```
 
-Follow these step-by-step instructions to run the Reconciliation Toolkit GUI:
+3. **Activate the Virtual Environment:**
+   - On Windows:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - On Unix or MacOS:
+     ```bash
+     source venv/bin/activate
+     ```
 
-### 1. Clone the Repository
+4. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Clone the repository to your local machine using the following command:
+5. **Make the CLI Executable (Unix/MacOS):**
+   ```bash
+   chmod +x csv_reconciler.py
+   ```
 
+## Usage
+
+### CLI Usage
+#### CLI Options:
+
+- `-s` or `--source`: Path to the source CSV file.
+- `-t` or `--target`: Path to the target CSV file.
+- `-o` or `--output`: Path to save the output reconciliation report.
+
+#### Example:
 ```bash
-git clone https://github.com/EKibet/csv_reconciliation
+ python reconciliation-cli/reconciliation_cli.py -s reconciliation-cli/source.csv -t reconciliation-cli/target.csv -o reconciliation-cli/reconciliation_report.csv
 ```
 
-### 2. Navigate to the Project Directory
+1. **Choose Source CSV:**
+   Click the "Browse" button to select the source CSV file.
 
-Change into the project directory:
+2. **Choose Target CSV:**
+   Click the "Browse" button to select the target CSV file.
 
-```bash
-cd reconciliation-toolkit
-```
+3. **Run Reconciliation:**
+   Click the "Run Reconciliation" button to initiate the reconciliation process.
 
-### 3. Launch the GUI Tool
+4. **View Results:**
+   After reconciliation, click the "View Results" button to see the reconciliation report.
 
-Run the following command to launch the GUI tool:
+## Common Issues and Solutions
 
-```bash
-python gui_tool.py
-```
+1. **File Not Found:**
+   - Ensure that the provided file paths are correct.
+   - Check file names for typos.
 
-### 4. GUI Interface
+2. **Invalid CSV Format:**
+   - Verify that the CSV files are well-formatted with headers.
 
-Once the GUI is launched, you will see a window with the following options:
+3. **Permission Denied:**
+   - Ensure that you have the necessary permissions to read/write files in the specified directories.
 
-- **Choose Source CSV**: Click the "Browse" button to select the source CSV file.
-- **Choose Target CSV**: Click the "Browse" button to select the target CSV file.
-- **Run Reconciliation**: Click the "Run Reconciliation" button to initiate the reconciliation process.
-- After running the reconciliation, the tool will generate a CSV report with discrepancies. 
-- The report will be saved in the media directory.
+4. **No Python Interpreter Found:**
+   - Add the shebang line (`#!/usr/bin/env python`) at the beginning of the script.
+   - Ensure the script is executable (`chmod +x csv_reconciler.py`).
 
-### 5. View Results
+## Contributing
 
-After running the reconciliation, the tool will generate a CSV report with discrepancies. The report will be saved in the `media` directory.
-To view the reconciliation report:
+Feel free to contribute by opening issues or submitting pull requests. Your feedback is highly appreciated!
 
-Option 1: Manually View Results
 
-Navigate to the media directory within the project folder.
-Look for the CSV file with a unique timestamp (e.g., 20230101235959.csv).
-Open the CSV file using a spreadsheet application like Microsoft Excel or Google Sheets to view the detailed reconciliation results.
-Option 2: View Results Within the GUI
+## Screenshots
 
-Click on the "View Results" button within the GUI after the reconciliation process is complete.
-The reconciliation report will be displayed directly within the GUI, allowing you to inspect the discrepancies without opening an external spreadsheet application.
+Screenshots to visually demonstrate how to use the tool.
 
-### 6. Exit the GUI
+### CLI Tool in Action
 
-Close the GUI window when you have completed the reconciliation process.
+![CLI Tool](reconciliation-cli/media/reconciliation-tool-inaction.gif)
 
-## Additional Notes
+## License
 
-- Ensure that your source and target CSV files have the required columns and format as specified in the documentation.
-- The tool supports large datasets through the use of Dask for parallel processing.
+This project is licensed under the [MIT License](LICENSE).

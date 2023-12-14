@@ -1,4 +1,4 @@
-Type,Record Identifier,Field,Source Value,Target Value,Source_Value,Target_Value
-Missing in Target,3,,,,,
-Missing in Source,4,,,,,
-Field Discrepancy,2,Date,,,2023-01-02,2023-01-04
+Type,Record Identifier,Field,Source Value,Target Value,ID,Name,Date,Amount,Date_source,Amount_source,Date_target,Amount_target,Name_source,Name_target
+Missing in Target,,,,,3.0,Robert Brown,2023-01-03,300.75,,,,,,
+Missing in Source,,,,,4.0,Emily White,2023-01-05,400.9,,,,,,
+Field Discrepancy,2,Date,2023-01-02,2023-01-04,,,,,,200.5,,200.5,Jane Smith,Jane Smith
