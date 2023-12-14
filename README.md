@@ -1,4 +1,3 @@
-```markdown
 # Reconciliation Toolkit GUI - User Documentation
 
 Welcome to the Reconciliation Toolkit GUI, a graphical user interface for reconciling CSV files. This tool allows you to easily select source and target CSV files, initiate the reconciliation process, and visualize the results.
@@ -81,4 +80,3 @@ Close the GUI window when you have completed the reconciliation process.
 ## GUI Demo
 
 ![Reconciliation GUI Tool Demo](/media/reconciliation-gui-inaction.gif)
-```
