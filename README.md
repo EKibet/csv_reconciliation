@@ -17,54 +17,64 @@ Before running the GUI tool, ensure that you have the following prerequisites in
 
 Follow these step-by-step instructions to run the Reconciliation Toolkit GUI:
 
-### 1. Clone the Repository
+# Clone the repository to your local machine
+git clone https://github.com/EKibet/csv_reconciliation.git
 
-Clone the repository to your local machine using the following command:
+# 2. Navigate into the project directory
+cd csv_reconciliation
 
-```bash
-git clone https://github.com/EKibet/csv_reconciliation
-```
+# 2.1 Checkout into the gui-tool branch
+git checkout gui-tool
 
-### 2. Navigate to the Project Directory
-
-Change into the project directory:
-
-```bash
-cd reconciliation-toolkit
-```
 
 ### 3. Launch the GUI Tool
 
 Run the following command to launch the GUI tool:
 
 ```bash
-python gui_tool.py
+python3 reconciliation_gui/reconciliation_gui.py
+
 ```
 
-### 4. GUI Interface
+## 4. GUI Interface
 
-Once the GUI is launched, you will see a window with the following options:
+Upon launching the GUI, you'll encounter the following options:
 
-- **Choose Source CSV**: Click the "Browse" button to select the source CSV file.
-- **Choose Target CSV**: Click the "Browse" button to select the target CSV file.
-- **Run Reconciliation**: Click the "Run Reconciliation" button to initiate the reconciliation process.
-- After running the reconciliation, the tool will generate a CSV report with discrepancies. 
-- The report will be saved in the media directory.
+- **Choose Source CSV**: Use the "Browse" button to select your source CSV file.
+- **Choose Target CSV**: Utilize the "Browse" button to select your target CSV file.
+- **Run Reconciliation**: Initiate the reconciliation process by clicking the "Run Reconciliation" button.
 
-### 5. View Results
+Once the reconciliation completes, a CSV report containing discrepancies will be generated and saved in the `media` directory.
 
-After running the reconciliation, the tool will generate a CSV report with discrepancies. The report will be saved in the `media` directory.
-To view the reconciliation report:
+## 5. Viewing Results
 
-Option 1: Manually View Results
+After the reconciliation, access the report in the `media` directory:
 
-Navigate to the media directory within the project folder.
-Look for the CSV file with a unique timestamp (e.g., 20230101235959.csv).
-Open the CSV file using a spreadsheet application like Microsoft Excel or Google Sheets to view the detailed reconciliation results.
-Option 2: View Results Within the GUI
+### Option 1: Manual Viewing
 
-Click on the "View Results" button within the GUI after the reconciliation process is complete.
-The reconciliation report will be displayed directly within the GUI, allowing you to inspect the discrepancies without opening an external spreadsheet application.
+## 4. GUI Interface
+
+Upon launching the GUI, you'll encounter the following options:
+
+- **Choose Source CSV**: Use the "Browse" button to select your source CSV file.
+- **Choose Target CSV**: Utilize the "Browse" button to select your target CSV file.
+- **Run Reconciliation**: Initiate the reconciliation process by clicking the "Run Reconciliation" button.
+
+Once the reconciliation completes, a CSV report containing discrepancies will be generated and saved in the `media` directory.
+
+## 5. Viewing Results
+
+After the reconciliation, access the report in the `media` directory:
+
+### Option 1: Manual Viewing
+
+1. Navigate to the media directory within the project folder.
+2. Locate the CSV file with a unique timestamp (e.g., 20230101235959.csv).
+3. Open the CSV file using a spreadsheet application like Microsoft Excel or Google Sheets to inspect detailed reconciliation results.
+
+### Option 2: In-GUI Viewing
+
+Click on the "View Results" button within the GUI after the reconciliation process is complete. The reconciliation report will be displayed directly in the GUI, enabling you to inspect discrepancies without using an external spreadsheet application.
 
 ### 6. Exit the GUI
 
@@ -73,4 +83,9 @@ Close the GUI window when you have completed the reconciliation process.
 ## Additional Notes
 
 - Ensure that your source and target CSV files have the required columns and format as specified in the documentation.
-- The tool supports large datasets through the use of Dask for parallel processing.
+- In future, the tool will support large datasets through the use of Dask for parallel processing.
+
+
+### GUI Demo
+
+![Screenshot 1](media/reconciliation-gui-inaction.gif)
