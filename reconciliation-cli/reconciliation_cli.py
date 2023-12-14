@@ -1,6 +1,7 @@
 import argparse
-import pandas as pd
 from datetime import datetime
+
+import pandas as pd
 
 
 def reconcile_csv(source_path, target_path, output_path):
