@@ -1,4 +1,3 @@
-```markdown
 # CSV Reconciler
 
 ## Overview
@@ -105,4 +104,3 @@ Screenshots to visually demonstrate how to use the tool.
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-```
