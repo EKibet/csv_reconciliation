@@ -2,13 +2,3 @@ Type,Record Identifier,Field,Source Value,Target Value,Source_Value,Target_Value
 Missing in Target,3,,,,,
 Missing in Source,4,,,,,
 Field Discrepancy,2,Date,,,2023-01-02,2023-01-04
-
-Identifier,Type,Field,Source_Value,Target_Value
-3,Missing in Target,,,
-4,Missing in Source,,,
-2,Field Discrepancy,Date,2023-01-02,2023-01-04
-
-
-
-
-
