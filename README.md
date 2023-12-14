@@ -1,68 +1,61 @@
+```markdown
 # Reconciliation Toolkit GUI - User Documentation
 
 Welcome to the Reconciliation Toolkit GUI, a graphical user interface for reconciling CSV files. This tool allows you to easily select source and target CSV files, initiate the reconciliation process, and visualize the results.
 
 ## Prerequisites
 
-Before running the GUI tool, ensure that you have the following prerequisites installed on your system:
-
-1. Python 3.x (Download and installation instructions: [Python Downloads](https://www.python.org/downloads/))
-2. Required Python packages. Install them using the following command:
-
+1. **Clone the Repository and Checkout `gui-tool` Branch:**
    ```bash
-   pip install pandas 
+   git clone https://github.com/EKibet/csv_reconciliation.git
+   cd csv_reconciliation
+   git checkout gui-tool
    ```
 
-## Running the GUI Tool
+2. **Create a Virtual Environment (Optional but Recommended):**
+   ```bash
+   python -m venv venv
+   ```
 
-Follow these step-by-step instructions to run the Reconciliation Toolkit GUI:
+3. **Activate the Virtual Environment:**
+   - On Windows:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - On Unix or MacOS:
+     ```bash
+     source venv/bin/activate
+     ```
 
-# Clone the repository to your local machine
-git clone https://github.com/EKibet/csv_reconciliation.git
+4. **Install Dependencies:**
+   ```bash
+   make install
+   ```
+   or 
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-# 2. Navigate into the project directory
-cd csv_reconciliation
+5. **Launch the GUI Tool:**
+   ```bash
+   make gui
+   ```
+   or  
+   ```bash
+   python3 reconciliation_gui/reconciliation_gui.py
+   ```
 
-# 2.1 Checkout into the gui-tool branch
-git checkout gui-tool
-
-
-### 3. Launch the GUI Tool
-
-Run the following command to launch the GUI tool:
-
-```bash
-python3 reconciliation_gui/reconciliation_gui.py
-
-```
-
-## 4. GUI Interface
+## GUI Interface
 
 Upon launching the GUI, you'll encounter the following options:
 
-- **Choose Source CSV**: Use the "Browse" button to select your source CSV file.
-- **Choose Target CSV**: Utilize the "Browse" button to select your target CSV file.
+- **Choose Source CSV**: Use the "Browse" button to select your source CSV file. Choose from the project's media folder.
+- **Choose Target CSV**: Utilize the "Browse" button to select your target CSV file. Choose from the project's media folder.
 - **Run Reconciliation**: Initiate the reconciliation process by clicking the "Run Reconciliation" button.
 
 Once the reconciliation completes, a CSV report containing discrepancies will be generated and saved in the `media` directory.
 
-## 5. Viewing Results
-
-After the reconciliation, access the report in the `media` directory:
-
-### Option 1: Manual Viewing
-
-## 4. GUI Interface
-
-Upon launching the GUI, you'll encounter the following options:
-
-- **Choose Source CSV**: Use the "Browse" button to select your source CSV file.
-- **Choose Target CSV**: Utilize the "Browse" button to select your target CSV file.
-- **Run Reconciliation**: Initiate the reconciliation process by clicking the "Run Reconciliation" button.
-
-Once the reconciliation completes, a CSV report containing discrepancies will be generated and saved in the `media` directory.
-
-## 5. Viewing Results
+## Viewing Results
 
 After the reconciliation, access the report in the `media` directory:
 
@@ -76,16 +69,16 @@ After the reconciliation, access the report in the `media` directory:
 
 Click on the "View Results" button within the GUI after the reconciliation process is complete. The reconciliation report will be displayed directly in the GUI, enabling you to inspect discrepancies without using an external spreadsheet application.
 
-### 6. Exit the GUI
+## Exit the GUI
 
 Close the GUI window when you have completed the reconciliation process.
 
 ## Additional Notes
 
 - Ensure that your source and target CSV files have the required columns and format as specified in the documentation.
-- In future, the tool will support large datasets through the use of Dask for parallel processing.
+- In the future, the tool will support large datasets through the use of Dask for parallel processing.
 
+## GUI Demo
 
-### GUI Demo
-
-![Screenshot 1](media/reconciliation-gui-inaction.gif)
+![Reconciliation GUI Tool Demo](/media/reconciliation-gui-inaction.gif)
+```
