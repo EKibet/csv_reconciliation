@@ -1,109 +1,48 @@
-# CSV Reconciler
+# Reconciliation Toolkit
+
+Welcome to the Reconciliation Toolkit, a versatile toolset for reconciling CSV files with ease. This toolkit provides both a Command Line Interface (CLI) and a Graphical User Interface (GUI) to streamline the reconciliation process.
 
 ## Overview
 
-CSV Reconciler is a tool designed to facilitate the reconciliation of data between two CSV files. This tool is available both as a Command Line Interface (CLI) and as a Graphical User Interface (GUI).
+The Reconciliation Toolkit offers two main components:
 
-## Table of Contents
+1. **Reconciliation CLI:**
+   - For detailed instructions on using the CLI, please refer to the [CLI README](reconciliation-cli/README.md).
+   - The CLI allows you to reconcile CSV files through a command-line interface, providing a summary of discrepancies and saving a reconciliation report.
 
-- [Installation](#installation)
-- [Usage](#usage)
-  - [CLI Usage](#cli-usage)
-  - [GUI Usage](#gui-usage)
-- [Common Issues and Solutions](#common-issues-and-solutions)
-- [Contributing](#contributing)
-- [Screenshots](#screenshots)
-- [License](#license)
+2. **Reconciliation GUI:**
+   - For the GUI tool, check out the [GUI README](gui-tool/README.md).
+   - The GUI simplifies the reconciliation process with a user-friendly interface, allowing you to select source and target CSV files, run reconciliation, and view results visually.
 
-## Installation
+## Demo
 
-1. **Clone the Repository and Checkout `reconciliation-cli` Branch:**
-   ```bash
-   git clone https://github.com/EKibet/csv_reconciliation.git
-   cd csv-reconciler
-   git checkout reconciliation-cli
-   ```
+Here's a brief demonstration of how the Reconciliation Toolkit works:
+### CLI Tool in Action
 
-2. **Create a Virtual Environment (Optional but Recommended):**
-   ```bash
-   python -m venv venv
-   ```
+![Reconciliation  CLI Tool Demo](reconciliation-cli/media/reconciliation-tool-inaction.gif)
 
-3. **Activate the Virtual Environment:**
-   - On Windows:
-     ```bash
-     venv\Scripts\activate
-     ```
-   - On Unix or MacOS:
-     ```bash
-     source venv/bin/activate
-     ```
 
-4. **Install Dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Future Implementations
 
-5. **Make the CLI Executable (Unix/MacOS):**
-   ```bash
-   chmod +x csv_reconciler.py
-   ```
+We are continuously working to enhance the Reconciliation Toolkit. Future improvements may include:
 
-## Usage
+- Allow users to configure which columns to compare, in case some columns should be ignored.
+- Integration with cloud storage services.
+- Performance optimizations for large datasets through the use of Dask for parallel processing.
 
-### CLI Usage
-#### CLI Options:
 
-- `-s` or `--source`: Path to the source CSV file.
-- `-t` or `--target`: Path to the target CSV file.
-- `-o` or `--output`: Path to save the output reconciliation report.
+## Getting Started
 
-#### Example:
-```bash
- python reconciliation-cli/reconciliation_cli.py -s reconciliation-cli/source.csv -t reconciliation-cli/target.csv -o reconciliation-cli/reconciliation_report.csv
-```
+To get started, follow the instructions in the respective README files for the CLI and GUI components.
 
-1. **Choose Source CSV:**
-   Click the "Browse" button to select the source CSV file.
-
-2. **Choose Target CSV:**
-   Click the "Browse" button to select the target CSV file.
-
-3. **Run Reconciliation:**
-   Click the "Run Reconciliation" button to initiate the reconciliation process.
-
-4. **View Results:**
-   After reconciliation, click the "View Results" button to see the reconciliation report.
-
-## Common Issues and Solutions
-
-1. **File Not Found:**
-   - Ensure that the provided file paths are correct.
-   - Check file names for typos.
-
-2. **Invalid CSV Format:**
-   - Verify that the CSV files are well-formatted with headers.
-
-3. **Permission Denied:**
-   - Ensure that you have the necessary permissions to read/write files in the specified directories.
-
-4. **No Python Interpreter Found:**
-   - Add the shebang line (`#!/usr/bin/env python`) at the beginning of the script.
-   - Ensure the script is executable (`chmod +x csv_reconciler.py`).
+- [CLI-Tool README](reconciliation-cli/README.md)
+- [GUI-Tool README](gui-tool/README.md)
 
 ## Contributing
 
-Feel free to contribute by opening issues or submitting pull requests. Your feedback is highly appreciated!
-
-
-## Screenshots
-
-Screenshots to visually demonstrate how to use the tool.
-
-### CLI Tool in Action
-
-![CLI Tool](reconciliation-cli/media/reconciliation-tool-inaction.gif)
+Contributions are welcome! If you have suggestions, bug reports, or feature requests, please open an issue.
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
