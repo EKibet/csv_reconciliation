@@ -1,3 +1,4 @@
+```markdown
 # CSV Reconciler
 
 ## Overview
@@ -8,7 +9,6 @@ CSV Reconciler is a tool designed to facilitate the reconciliation of data betwe
 
 - [Installation](#installation)
 - [Usage](#usage)
-  - [CLI Usage](#cli-usage)
   - [GUI Usage](#gui-usage)
 - [Common Issues and Solutions](#common-issues-and-solutions)
 - [Contributing](#contributing)
@@ -20,7 +20,7 @@ CSV Reconciler is a tool designed to facilitate the reconciliation of data betwe
 1. **Clone the Repository and Checkout `reconciliation-cli` Branch:**
    ```bash
    git clone https://github.com/EKibet/csv_reconciliation.git
-   cd csv-reconciler
+   cd csv_reconciliation
    git checkout reconciliation-cli
    ```
 
@@ -44,11 +44,6 @@ CSV Reconciler is a tool designed to facilitate the reconciliation of data betwe
    pip install -r requirements.txt
    ```
 
-5. **Make the CLI Executable (Unix/MacOS):**
-   ```bash
-   chmod +x csv_reconciler.py
-   ```
-
 ## Usage
 
 ### CLI Usage
@@ -58,9 +53,13 @@ CSV Reconciler is a tool designed to facilitate the reconciliation of data betwe
 - `-t` or `--target`: Path to the target CSV file.
 - `-o` or `--output`: Path to save the output reconciliation report.
 
-#### Example:
+#### Step by step guide:
 ```bash
- python reconciliation-cli/reconciliation_cli.py -s reconciliation-cli/source.csv -t reconciliation-cli/target.csv -o reconciliation-cli/reconciliation_report.csv
+make cli
+```
+or  
+```bash
+python reconciliation-cli/reconciliation_cli.py -s reconciliation-cli/source.csv -t reconciliation-cli/target.csv -o reconciliation-cli/reconciliation_report.csv
 ```
 
 1. **Choose Source CSV:**
@@ -73,7 +72,8 @@ CSV Reconciler is a tool designed to facilitate the reconciliation of data betwe
    Click the "Run Reconciliation" button to initiate the reconciliation process.
 
 4. **View Results:**
-   After reconciliation, click the "View Results" button to see the reconciliation report.
+   After reconciliation, click the "View Results" button to see the reconciliation report.  
+   Reports are also saved here within the files working directory which is reconciliation-cli/
 
 ## Common Issues and Solutions
 
@@ -89,12 +89,10 @@ CSV Reconciler is a tool designed to facilitate the reconciliation of data betwe
 
 4. **No Python Interpreter Found:**
    - Add the shebang line (`#!/usr/bin/env python`) at the beginning of the script.
-   - Ensure the script is executable (`chmod +x csv_reconciler.py`).
 
 ## Contributing
 
 Feel free to contribute by opening issues or submitting pull requests. Your feedback is highly appreciated!
-
 
 ## Screenshots
 
@@ -102,8 +100,9 @@ Screenshots to visually demonstrate how to use the tool.
 
 ### CLI Tool in Action
 
-![CLI Tool](reconciliation-cli/media/reconciliation-tool-inaction.gif)
+![CLI Tool](/media/reconciliation-tool-inaction.gif)
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+```
