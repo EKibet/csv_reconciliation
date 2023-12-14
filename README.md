@@ -1,4 +1,3 @@
-```markdown
 # Reconciliation Toolkit
 
 Welcome to the Reconciliation Toolkit, a versatile toolset for reconciling CSV files with ease. This toolkit provides both a Command Line Interface (CLI) and a Graphical User Interface (GUI) to streamline the reconciliation process.
@@ -125,4 +124,3 @@ Contributions are welcome! If you have suggestions, bug reports, or feature requ
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-```
